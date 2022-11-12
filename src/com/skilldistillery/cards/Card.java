@@ -14,7 +14,8 @@ public class Card {
 	}
 	
 	public int getValue() {
-		return this.getValue();
+		// this.getValue() or this.rank.getValue()?
+		return this.rank.getValue();
 	}
 
 	@Override
@@ -33,7 +34,7 @@ public class Card {
 		Card other = (Card) obj;
 		return rank == other.rank && suit == other.suit;
 	}
-
+// how can I reach this toString?
 	@Override
 	public String toString() {
 		return rank + " of " + suit;
