@@ -10,7 +10,11 @@ public class BlackjackHand extends Hand {
 	// BlackjackHand is an extension of Hand, therefore has access to methods within abstract Hand class 
 	public int getHandValue() {
 		// this needs logic
-		return 0;
+		int totalValue = 0;
+		for (Card card : this.cards) {
+			totalValue += card.getValue();
+		}
+		return totalValue;
 	}
 	
 	public boolean isBlackjack() {

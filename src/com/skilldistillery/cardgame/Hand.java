@@ -6,13 +6,14 @@ import java.util.List;
 import com.skilldistillery.cards.Card;
 
 public abstract class Hand {
-	private List<Card> cards;
+	 protected List<Card> cards;
 
 	
 	public Hand() {
 		// classes that extend Hand have access to Hand's constructor
 		// see BlackjackHand class
 		cards = new ArrayList<Card>();
+//		cards = new ArrayList<>();
 
 	}
 
@@ -25,25 +26,27 @@ public abstract class Hand {
 	}
 	
 	public void clear() {
+//		cards.removeAll(cards);
 		cards.clear();
 	}
 	
 	public int getHandValue() {
-	// need logic
+	// not properly calculating values for cards
 	int totalValue = 0;
-	int numCards = cards.size();
-	for (Card card : cards) {
-		int c = card.getValue();
-		totalValue += card.getValue();	
-	}
+
 	return totalValue;
 	}
 
+
+	public List<Card> getCards() {
+		return cards;
+	}
+
+
 	@Override
 	public String toString() {
-		return super.toString();
+		return "Hand [cards=" + cards + "]";
 	}
+
 	
-
-
 }
