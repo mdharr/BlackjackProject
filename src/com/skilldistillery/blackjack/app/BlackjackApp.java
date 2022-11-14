@@ -132,6 +132,8 @@ public class BlackjackApp {
 									} // end of loop that continues to deal cards to dealer until they either get at least 17 cards or bust
 									compareCards(player.getHand().getHandValue(), dealer.getHand().getHandValue());
 									System.out.println();
+									playAnother(scanner);
+									System.out.println();
 								}
 								
 							} // hit or stand for dealer loop, then compare cards and announce winner
